@@ -8,6 +8,7 @@ spring:
     url: jdbc:mysql://localhost:3306/book_service?useTimezone=true&serverTimezone=UTC
     username: root
     password: admin123
+#diz para o jackosn o que se deve fazer caso tente serializar para JSON um bean que veio null
   jackson:
     default-property-inclusion: NON_NULL
     serialization:
@@ -19,6 +20,7 @@ spring:
     properties:
       hibernate:
         dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+#o Flyway é responsável pelo 'versionamento' do Banco de Dados, baseado nos SQL que estão na pasta db.migration
   flyway:
     url: jdbc:mysql://localhost:3306/
     schemas: book_service

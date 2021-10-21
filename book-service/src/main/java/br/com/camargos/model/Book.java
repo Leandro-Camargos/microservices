@@ -1,5 +1,7 @@
 package br.com.camargos.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -15,6 +17,7 @@ import java.util.Objects;
 
 @Entity
 @Table(name = "book")
+@JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
 public class Book {
 
 
